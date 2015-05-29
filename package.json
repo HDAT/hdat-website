@@ -1,0 +1,33 @@
+{
+  "name": "HDAT",
+  "description": "Temporary",
+  "homepage": "http://www.hdat.eu",
+  "keywords": [
+    "util",
+    "functional",
+    "server",
+    "client",
+    "browser"
+  ],
+  "author": "Erik van Zummeren <erikvanzummeren@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "del": "^1.2.0",
+    "gulp": "^3.8.11",
+    "gulp-autoprefixer": "^2.3.0",
+    "gulp-cache": "^0.2.9",
+    "gulp-concat": "^2.5.2",
+    "gulp-imagemin": "^2.2.1",
+    "gulp-jshint": "^1.11.0",
+    "gulp-livereload": "^3.8.0",
+    "gulp-minify-css": "^1.1.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-ruby-sass": "^1.0.5",
+    "gulp-uglify": "^1.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/HDAT/hdatwebsite.git"
+  }
+}
