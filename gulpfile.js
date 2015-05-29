@@ -1,15 +1,15 @@
 var gulp = require('gulp'),
     sass = require('gulp-ruby-sass'),
-    autoprefixer = require('gulp-autoprefixer'),
-    minifycss = require('gulp-minify-css'),
+    autoPrefixer = require('gulp-autoprefixer'),
+    minifyCss = require('gulp-minify-css'),
     jshint = require('gulp-jshint'),
     uglify = require('gulp-uglify'),
-    imagemin = require('gulp-imagemin'),
+    imageMin = require('gulp-imagemin'),
     rename = require('gulp-rename'),
     concat = require('gulp-concat'),
     notify = require('gulp-notify'),
     cache = require('gulp-cache'),
-    livereload = require('gulp-livereload'),
+    liveReload = require('gulp-livereload'),
     del = require('del');
 
 gulp.task('styles', function() {
@@ -35,7 +35,7 @@ gulp.task('scripts', function() {
 
 gulp.task('images', function() {
   return gulp.src('src/images/**/*')
-    .pipe(cache(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true })))
+    .pipe(cache(imageMin({ optimizationLevel: 5, progressive: true, interlaced: true })))
     .pipe(gulp.dest('dist/assets/img'))
     .pipe(notify({ message: 'Images task complete' }));
 });
@@ -54,6 +54,6 @@ gulp.task('watch', function() {
   gulp.watch('src/images/**/*', ['images']);
 
     // Liverelaod
-  livereload.listen();
-  gulp.watch(['dist/**']).on('change', livereload.changed);
+  liveReload.listen();
+  gulp.watch(['dist/**']).on('change', liveReload.changed);
 });
