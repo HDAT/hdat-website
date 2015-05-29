@@ -2,6 +2,7 @@ var gulp = require('gulp'),
     sass = require('gulp-ruby-sass'),
     autoPrefixer = require('gulp-autoprefixer'),
     minifyCss = require('gulp-minify-css'),
+    size = require('gulp-filesize')
     jshint = require('gulp-jshint'),
     uglify = require('gulp-uglify'),
     imageMin = require('gulp-imagemin'),
@@ -27,9 +28,11 @@ gulp.task('scripts', function() {
     // .pipe(jshint.reporter('jshint-stylish'))
     .pipe(concat('main.js'))
     .pipe(gulp.dest('dist/assets/js'))
+    .pipe(size())
     .pipe(rename({suffix: '.min'}))
     .pipe(uglify())
     .pipe(gulp.dest('dist/assets/js'))
+    .pipe(size())
     .pipe(notify({ message: 'Scripts task complete' }));
 });
 
