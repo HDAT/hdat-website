@@ -1,5 +1,24 @@
 @import "bootstrap";
 
+/* Fckn bootstrap */
+.container {
+	padding: 0;
+	border-radius: 0;
+}
+
+@media screen and (min-width: 768px) {
+	.container {
+		padding: 0;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.container {
+		width: 100%;
+	}
+}
+
+/* Eigen styling */
 .hdat-tagline {
 	width: 175px;
 	margin-top: 10px;
