@@ -8,9 +8,10 @@ var gulp = require('gulp'),
     imageMin = require('gulp-imagemin'),
     rename = require('gulp-rename'),
     concat = require('gulp-concat'),
+    connect = require('gulp-connect'),
     notify = require('gulp-notify'),
     cache = require('gulp-cache'),
-    liveReload = require('gulp-livereload'),
+    livereload = require('gulp-livereload'),
     del = require('del'),
     ghPages = require('gulp-gh-pages');
 
@@ -53,20 +54,22 @@ gulp.task('clean', function(cb) {
     del('dist', cb)
 });
 
-gulp.task('default', ['clean'], function() {
-    gulp.start('styles', 'scripts', 'images', 'html');
+gulp.task('serve', function(){
+    // Start live-reload server
+    connect.server({
+        root: 'dist/',
+        port: 8888,
+        livereload: true
+    });
+
+    // Watches
+    gulp.watch('src/styles/**/*.scss', ['styles']);
+    gulp.watch('src/scripts/**/*.js', ['scripts']);
+    gulp.watch('src/images/**/*', ['images']);
+    gulp.watch('src/**/*.html', ['html']);
 });
 
-gulp.task('watch', function() {
-  gulp.watch('src/styles/**/*.scss', ['styles']);
-  gulp.watch('src/scripts/**/*.js', ['scripts']);
-  gulp.watch('src/images/**/*', ['images']);
-  gulp.watch('src/**/*.html', ['html']);
-
-    // Liverelaod
-  liveReload.listen();
-  gulp.watch(['dist/**']).on('change', liveReload.changed);
-});
+gulp.task('default', ['clean', 'styles', 'scripts', 'images', 'html', 'serve']);
 
 gulp.task('deploy', function() {
   return gulp.src('./dist/**/*')
