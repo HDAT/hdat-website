@@ -1,31 +1,67 @@
+@import url(http://fonts.googleapis.com/css?family=EB+Garamond);
+
 @import "bootstrap";
+@import "bootstrapreset";
+body {
+	min-height: 100%;
+	width: 100%;
+	position: absolute;
+	overflow: scroll;
+}
 
 /* Fckn bootstrap */
-.container {
-	padding: 0;
-	border-radius: 0;
-}
 
-@media screen and (min-width: 768px) {
-	.container {
-		padding: 0;
-	}
-}
 
-@media screen and (min-width: 1200px) {
-	.container {
-		width: 100%;
-	}
-}
+/* Presets */
+$firstColor: #cfcfcf;
+$secondColor: #b4b4b4;
+
+$headerGray: #FAFAFA;
 
 /* Eigen styling */
+.jumbotron {
+	height: 1400px;
+}
 .hdat-tagline {
 	width: 175px;
-	margin-top: 10px;
+	margin-top: 30px;
+	opacity: 0;
 }
 
 .hdat-logo {
 	width: 335px;
 	display: block;
-	margin-top: 35px;
+	margin-top: 50px;
+	opacity: 0;
+}
+
+.hdat-zeefakkel-container {
+	text-align: center;
+}
+
+.hdat-zeefakkel {
+	opacity: 0;
+	width: 500px;
+	margin-right: 0px;
+}
+
+/* Content */
+.introduction {
+	padding: 60px 60px 0 60px;
+	height: 0;
+	background: $firstColor;
+	opacity: 0;
+	p {
+		font-size: 20px;
+		color: $headerGray;
+		line-height: 32px;
+	}
+}
+.introduction-voc {
+	height: 0;
+	background: $secondColor;
+	opacity: 0;
+}
+p {
+	font-family: 'EB Garamond', serif;
 }

@@ -38,6 +38,14 @@ gulp.task('scripts', function() {
     .pipe(notify({ message: 'Scripts task complete' }));
 });
 
+gulp.task('vendor', function () {
+    return gulp.src([
+                'bower_components/gsap/src/minified/TweenMax.min.js'
+            ])
+    .pipe(concat('vendor.js'))
+    .pipe(gulp.dest('dist/assets/js/'))
+});
+
 gulp.task('images', function() {
   return gulp.src('src/images/**/*')
     .pipe(cache(imageMin({ optimizationLevel: 5, progressive: true, interlaced: true })))
@@ -69,7 +77,7 @@ gulp.task('serve', function(){
     gulp.watch('src/**/*.html', ['html']);
 });
 
-gulp.task('default', ['clean', 'styles', 'scripts', 'images', 'html', 'serve']);
+gulp.task('default', ['clean', 'styles', 'scripts', 'vendor', 'images', 'html', 'serve']);
 
 gulp.task('deploy', function() {
   return gulp.src('./dist/**/*')
