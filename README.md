@@ -1,5 +1,5 @@
-## TO-DO
-# Voor morgen
+# TO-DO
+## Voor morgen
 
 * Media queries schrijven + juiste col's schrijven
 * Padding van de container halen, maar gelijk in de col's, daarmee ook de fakkel positioneren
