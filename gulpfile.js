@@ -11,6 +11,7 @@ var gulp = require('gulp'),
     connect = require('gulp-connect'),
     notify = require('gulp-notify'),
     cache = require('gulp-cache'),
+    runSync = require('run-sequence')
     livereload = require('gulp-livereload'),
     del = require('del'),
     ghPages = require('gulp-gh-pages');
@@ -81,7 +82,9 @@ gulp.task('serve', function(){
     gulp.watch('src/**/*.html', ['html']);
 });
 
-gulp.task('default', ['clean', 'styles', 'scripts', 'vendor', 'images', 'html', 'serve']);
+gulp.task('default', ['clean'], function(cb){
+ runSync(['styles', 'scripts', 'vendor', 'images', 'html', 'serve'])
+});
 
 gulp.task('deploy', function() {
   return gulp.src('./dist/**/*')
