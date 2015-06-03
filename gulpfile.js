@@ -40,8 +40,11 @@ gulp.task('scripts', function() {
 
 gulp.task('vendor', function () {
     return gulp.src([
+                'bower_components/gsap/src/minified/TimelineMax.min.js',
                 'bower_components/gsap/src/minified/TweenMax.min.js',
-                'bower_components/ScrollMagic/scrollmagic/minified/ScrollMagic.min.js'
+                'bower_components/ScrollMagic/scrollmagic/minified/ScrollMagic.min.js',
+                'bower_components/ScrollMagic/scrollmagic/minified/plugins/animation.gsap.min.js',
+                'bower_components/ScrollMagic/scrollmagic/minified/plugins/debug.addIndicators.min.js'
             ])
     .pipe(concat('vendor.js'))
     .pipe(gulp.dest('dist/assets/js/'))

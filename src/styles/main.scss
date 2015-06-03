@@ -48,30 +48,43 @@ $headerGray: #FAFAFA;
 }
 
 /* Content */
-.introduction {
-	padding: 60px 60px 0 60px;
+.blok {
 	height: 0;
-	background: $firstColor;
 	opacity: 0;
+}
+.videoBlock {
+	@extend .blok;
+	background: $firstColor;
+	padding: 0;
+}
+.darkBlock {
+	@extend .blok;
+	padding: 60px 60px 0 60px;
+	background: $secondColor;
 	p {
-		font-size: 20px;
 		color: $headerGray;
-		line-height: 32px;
 	}
 }
-.introduction-voc {
-	height: 0;
-	background: $secondColor;
-	opacity: 0;
+
+.lightBlock {
+	@extend .blok;
+	padding: 60px 60px 0 60px;
+	background: #cfcfcf;
+	text-align: center;
+	p {
+		color: $headerGray;
+	}
 }
+
+
 p {
 	font-family: $firstFont;
+	font-size: 20px;
+	line-height: 32px;
 }
 
 /* Video */
-.introduction-voc {
-	padding: 0;
-}
+
 #vid {
 	width: 100%;
 	opacity: .5;
@@ -86,16 +99,26 @@ p {
 	padding: 5px 10px;
 	background-color: orange;
 	color: #fff;
+	/* Hier nog even goed naar kijken */
+	position: absolute;
 	margin-top: 30%;
-	  position: absolute;
-  margin-left: auto;
-  margin-right: auto;
-  left: 40%;
-  right: 33%;
-}
-.cta-hdat:hover {
-	color: white;
+	margin-left: auto;
+	margin-right: auto;
+	left: 40%;
+	right: 33%;
+	&:hover {
+			color: white;
 	text-decoration: none;
 	background-color: black;
+	}
+}
+
+/* VOC */
+.hdat-ship {
+	width: 50%;
+	opacity: 1;
+}
+.vocBlock {
+	@extend .darkBlock;
 }
 
