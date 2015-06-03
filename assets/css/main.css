@@ -7159,6 +7159,7 @@ body {
 .videoBlock {
   background: #cfcfcf;
   padding: 0;
+  overflow: hidden;
 }
 
 .darkBlock, .vocBlock {
