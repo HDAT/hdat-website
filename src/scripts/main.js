@@ -42,6 +42,11 @@ TweenMax.to(".videoBlock", 1.5, {
 	ease: Expo.easeOut
 });
 
+// Methodology
+var methodology = TweenMax.from(".methodology", 1, {
+	opacity: 0
+});
+
 // Timelines
 var shipTl = new TimelineMax();
 
@@ -57,11 +62,19 @@ var control = new ScrollMagic.Controller({
 	});
 
 // Scrollmagic scenes
-var scene = new ScrollMagic.Scene({
+var vocScene = new ScrollMagic.Scene({
 	triggerElement: ".videoBlock",
 	duration: '30%'
 })
 .setTween(shipTl)
+.addIndicators().loglevel(3)
+.addTo(control);
+
+var methodologyScene = new ScrollMagic.Scene({
+	triggerElement: ".vocBlock",
+	duration: '30%'
+})
+.setTween(methodology)
 .addIndicators().loglevel(3)
 .addTo(control);
 
