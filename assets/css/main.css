@@ -7151,24 +7151,70 @@ body {
 }
 
 /* Content */
-.introduction {
-  padding: 60px 60px 0 60px;
+.blok, .videoBlock, .darkBlock, .lightBlock {
   height: 0;
-  background: #cfcfcf;
   opacity: 0;
-}
-.introduction p {
-  font-size: 20px;
-  color: #FAFAFA;
-  line-height: 32px;
 }
 
-.introduction-voc {
-  height: 0;
+.videoBlock {
+  background: #cfcfcf;
+  padding: 0;
+}
+
+.darkBlock {
+  padding: 60px 60px 0 60px;
   background: #b4b4b4;
-  opacity: 0;
+}
+.darkBlock p {
+  color: #FAFAFA;
+}
+
+.lightBlock {
+  padding: 60px 60px 0 60px;
+  background: #cfcfcf;
+  text-align: center;
+}
+.lightBlock p {
+  color: #FAFAFA;
 }
 
 p {
-  font-family: 'EB Garamond', serif;
+  font-family: "EB Garamond", serif;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+/* Video */
+#vid {
+  width: 100%;
+  opacity: .5;
+  z-index: 9;
+}
+
+.cta-hdat {
+  font-family: "EB Garamond", serif;
+  font-size: 16px;
+  display: inline-block;
+  z-index: 10;
+  border-radius: 10px;
+  padding: 5px 10px;
+  background-color: orange;
+  color: #fff;
+  /* Hier nog even goed naar kijken */
+  position: absolute;
+  margin-top: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  left: 40%;
+  right: 33%;
+}
+.cta-hdat:hover {
+  color: white;
+  text-decoration: none;
+  background-color: black;
+}
+
+/* VOC */
+.hdat-ship {
+  width: 50%;
 }

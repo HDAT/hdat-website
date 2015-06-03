@@ -1,3 +1,21 @@
+// ScrollMagic init
+var control = new ScrollMagic.Controller({
+	    globalSceneOptions: {
+	        triggerHook: 'onLeave'
+	    }
+	});
+
+// iPhone back to stylesheet position
+var scene = new ScrollMagic.Scene({
+triggerElement: ".videoBlock"
+
+})
+.setTween(console.log("bla"))
+.addIndicators()
+.loglevel(1)
+.addTo(control);
+
+
 TweenMax.to(".jumbotron", .5, {
 	height: 400, 
 	delay: 1, 
@@ -26,13 +44,19 @@ TweenMax.to(".hdat-zeefakkel", 1.5, {
 });
 
 // Content
-TweenMax.to(".introduction", 1.5, {
+var lichtBlok = TweenMax.to(".lightBlock", 1.5, {
 	height: 400,
 	delay: 1.7, 
 	opacity: 1,
 	ease: Expo.easeOut
 });
-TweenMax.to(".introduction-voc", 1.5, {
+TweenMax.to(".darkBlock", 1.5, {
+	height: 400,
+	delay: 1.7, 
+	opacity: 1,
+	ease: Expo.easeOut
+});
+TweenMax.to(".videoBlock", 1.5, {
 	height: 400,
 	delay: 1.8, 
 	opacity: 1,
