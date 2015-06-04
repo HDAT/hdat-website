@@ -1,10 +1,10 @@
 # Teksten voor HDAT
 
 ## Algemeen
-In the 17th and 18th century thousands of Dutch ships sailed to Asia and vice versa. Over the last fourty years Dutch historians and institutes spent a considerable amount of time and resources on collecting and storing trade-related sources into databases. Historical Dutch-Asiatic Trading (HDAT), a student project by Robert-Jan Korteschiel and Erik van Zummeren, gathered various dataset and visualises them on a world map.
+In the 17th and 18th century thousands of Dutch ships sailed to Asia and vice versa. Over the last fourty years Dutch historians and institutes spent a considerable amount of time and resources on collecting and storing trade-related sources into databases. Historical Dutch-Asiatic Trading (HDAT), a student project by Robert-Jan Korteschiel and Erik van Zummeren, gathered various dataset and visualises those datasets on a world map.
 
 ## VOC
-In the 17th century the Dutch Republic was one of the most powerful places of the world. Largely responsible for this success was the Dutch East India company (VOC). The company is often considered as one of the first multinationals in the world, and it was the first company that issued stocks. It's trading network spanned almost the entire continent, and therefor(e?) this visualisation does not only show how the Dutch trade went, but also how the 17th and 18th century world trade looked like.
+In the 17th century the Dutch Republic was one of the most powerful places of the world. Largely responsible for this success was the Dutch East India company (VOC). The company is often considered as one of the first multinationals in the world, and it was the first company that issued stocks. It's trading network spanned almost the entire continent, and therefore this visualisation does not only show how the Dutch trade went, but also how the 17th and 18th century world trade looked like.
 
 ## Methodology
 At the current stage of our project we make mostly use of the Bookkeeper-General Batavia dataset. This database contains the voyages that went from and to Asia. It was kept and maintained at the Town of Batavia (Indonesia), which acted as the VOC's headquarters. In recent years this administration was digitized by the Huygens Institute for the History of the Netherlands. 
