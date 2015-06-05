@@ -7096,6 +7096,7 @@ button.close {
 @media screen and (min-width: 768px) {
   .container {
     padding: 0;
+    width: 100%;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -7152,8 +7153,8 @@ body {
 
 /* Content */
 .blok, .videoBlock, .darkBlock, .vocBlock, .lightBlock {
-  height: 0;
-  opacity: 0;
+  height: auto;
+  opacity: 1;
 }
 
 .videoBlock {
@@ -7183,6 +7184,23 @@ p {
   font-family: "EB Garamond", serif;
   font-size: 20px;
   line-height: 32px;
+}
+
+/* Tech stack & shit */
+h3 {
+  font-family: "EB Garamond", serif;
+}
+
+ul {
+  padding-left: 0;
+}
+
+li {
+  margin-top: 6px;
+  list-style-type: none;
+  color: #989898;
+  font-size: 16px;
+  font-family: "EB Garamond", serif;
 }
 
 /* Video */
@@ -7222,9 +7240,18 @@ p {
 }
 
 /* Methodology */
-.methodology {
-  margin-left: 25%;
-  margin-right: 25%;
-  padding-top: 50px;
-  opacity: 1;
+.methodologyContainer {
+  background-color: #FAFAFA;
+}
+
+@media (min-width: 992px) {
+  .methodology {
+    margin-left: 25%;
+    margin-right: 25%;
+    padding-top: 50px;
+    opacity: 1;
+  }
+}
+.footer {
+  padding-bottom: 100px;
 }

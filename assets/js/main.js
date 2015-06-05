@@ -29,16 +29,16 @@ TweenMax.to(".hdat-zeefakkel", 1.5, {
 });
 
 // Content
-TweenMax.to(".darkBlock", 1.5, {
-	height: 400,
+TweenMax.from(".darkBlock", 1.5, {
+	height: 0,
 	delay: 1.7, 
-	opacity: 1,
+	opacity: 0,
 	ease: Expo.easeOut
 });
-TweenMax.to(".videoBlock", 1.5, {
-	height: 400,
+TweenMax.from(".videoBlock", 1.5, {
+	height: 0,
 	delay: 1.8, 
-	opacity: 1,
+	opacity: 0,
 	ease: Expo.easeOut
 });
 
@@ -63,7 +63,7 @@ var control = new ScrollMagic.Controller({
 
 // Scrollmagic scenes
 var vocScene = new ScrollMagic.Scene({
-	triggerElement: ".videoBlock",
+	triggerElement: ".firstBlock",
 	duration: '30%'
 })
 .setTween(shipTl)
