@@ -12,6 +12,7 @@ body {
 /* Fckn bootstrap */
 
 
+
 /* Presets */
 $firstFont: 'EB Garamond', serif;
 
@@ -49,8 +50,8 @@ $headerGray: #FAFAFA;
 
 /* Content */
 .blok {
-	height: 0;
-	opacity: 0;
+	height: auto;
+	opacity: 1;
 }
 .videoBlock {
 	@extend .blok;
@@ -82,6 +83,21 @@ p {
 	font-family: $firstFont;
 	font-size: 20px;
 	line-height: 32px;
+}
+
+/* Tech stack & shit */
+h3 {
+	font-family: $firstFont;
+}
+ul {
+	padding-left: 0;
+}
+li {
+	margin-top: 6px;
+	list-style-type: none;
+	color: #989898;
+	font-size: 16px;
+	font-family: $firstFont;
 }
 
 /* Video */
@@ -127,9 +143,17 @@ p {
 .methodologyContainer {
 	background-color: $headerGray;
 }
-.methodology {
-	margin-left: 25%;
-	margin-right: 25%;
-	padding-top: 50px;
-	opacity: 1;
+
+@media (min-width: 992px) { 
+	.methodology {
+		margin-left: 25%;
+		margin-right: 25%;
+		padding-top: 50px;
+		opacity: 1;
+	}
+ }
+
+
+.footer {
+	padding-bottom: 100px;
 }
