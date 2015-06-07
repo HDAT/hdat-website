@@ -50,7 +50,7 @@ $headerGray: #FAFAFA;
 
 /* Content */
 .blok {
-	height: auto;
+	min-height: 400px;
 	opacity: 1;
 }
 .videoBlock {
@@ -83,6 +83,13 @@ p {
 	font-family: $firstFont;
 	font-size: 20px;
 	line-height: 32px;
+}
+
+label {
+	font-family: $firstFont;
+	font-size: 16px;
+	color: white;
+	text-align: left;
 }
 
 /* Tech stack & shit */
@@ -141,6 +148,7 @@ li {
 
 /* Methodology */
 .methodologyContainer {
+	padding-bottom: 50px;
 	background-color: $headerGray;
 }
 
@@ -153,7 +161,15 @@ li {
 	}
  }
 
+ .footercontainer {
+ 	background: $secondColor;
+ }
+
 
 .footer {
-	padding-bottom: 100px;
+	margin-left: 25%;
+	padding: 30px 0 75px 0;
 }
+
+/* Flexbox */
+/*-*/
