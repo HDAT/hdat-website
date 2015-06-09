@@ -1,4 +1,30 @@
+$('document').ready(function(){ 
+	var _fireBaseRef = new Firebase("https://hdat-form.firebaseio.com/");
+	$("#submit-btn").bind("click", function() {
+	    var comment = $("#feedback");
+	    var mail = $("#mail");
 
+	    var commentValue = $.trim(comment.val());
+	    var mailValue = $.trim(mail.val());
+	 	
+	    if (mailValue.length !== 0 || commentValue.length !== 0) {
+
+	        _fireBaseRef.push({mail: mailValue, comment: commentValue}, function(error) {
+	            if (error !== null) {
+	                alert('Unable to push comments to Firebase!');
+	            }
+	        });
+	        alert("submitted!");
+	 
+	        comment.val("");
+	    } else {
+	    	console.log(mailValue, commentValue)
+	        alert('Something is required to continue!');
+	    }
+	 
+	    return false;
+	});
+});
 
 
 TweenMax.to(".jumbotron", .5, {

@@ -8,6 +8,7 @@
   "license": "MIT",
   "devDependencies": {
     "gsap": "~1.17.0",
-    "firebase": "~2.2.6"
+    "firebase": "~2.2.6",
+    "jquery": "~2.1.4"
   }
 }

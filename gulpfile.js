@@ -33,7 +33,7 @@ gulp.task('scripts', function() {
     .pipe(gulp.dest('dist/assets/js'))
     .pipe(size())
     .pipe(rename({suffix: '.min'}))
-    .pipe(uglify())
+    // .pipe(uglify())
     .pipe(gulp.dest('dist/assets/js'))
     .pipe(size())
     .pipe(notify({ message: 'Scripts task complete' }));
@@ -43,7 +43,8 @@ gulp.task('vendor', function () {
     return gulp.src([
                 'bower_components/gsap/src/minified/TimelineMax.min.js',
                 'bower_components/gsap/src/minified/TweenMax.min.js',
-                'bower_components/firebase/firebase.js'
+                'bower_components/firebase/firebase.js',
+                'bower_components/jquery/dist/jquery.js'
             ])
     .pipe(concat('vendor.js'))
     .pipe(gulp.dest('dist/assets/js/'))
